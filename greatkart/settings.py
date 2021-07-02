@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -131,6 +132,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     'greatkart/static',
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # media files configuration
 MEDIA_URL = '/media/'
@@ -147,3 +149,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pragyathakur7654@gmail.com'
 EMAIL_HOST_PASSWORD = 'chika@#00'
 EMAIL_USE_TLS = True
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
