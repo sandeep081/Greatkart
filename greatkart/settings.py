@@ -28,7 +28,12 @@ SECRET_KEY = 'qj@ksi@&r0cr=uhj*fl9tjpu1i1rrh3iryok)9ij+o7n52rj58'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0'
+    '*',
+   'http://ptprosp0.herokuapp.com/',
+   'ptprosp0.herokuapp.com',
+   'ptprosp0.herokuapp.com/',
+   '127.0.0.1',
+    '0.0.0.0',
     'https://ptprosp0.herokuapp.com/',
     '127.0.0.1'
 ]
